@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="tab-box">
+      <div class="tab">
+        <h5 class="name">Tab N-1</h5>
+      </div>
+      <div class="tab">
+        <h5 class="name">Tab N-2</h5>
+      </div>
+      <div class="tab">
+        <h5 class="name">Tab N-3</h5>
+      </div>
+
+    </div>
+    <div class="taber">
+      <div class="title">tab 1 helog alsdhakljhdlk bwkj</div>
+      <div class="title">tab 2 askljdl hjen lnwe qw</div>
+      <div class="title">tab 3 kjslkjwpqwemnaionrqjwnbe,
+        <br>wapyhdwajhnd</div>
+    </div>
+    <script type="text/javascript">
+
+
+    function myfcg() {
+      let tab = document.getElementsByClassName('name');
+      for (let i = 0; i <tab.length; i++) {
+        tab[i].addEventListener('click',activer);
+      }
+    }
+
+    myfcg();
+
+
+    function myfc(nx) {
+      let taber = document.getElementsByClassName('title');
+      for (let i = 0; i <taber.length; i++) {
+        taber[i].classList.remove('show');
+      }
+      taber[nx].classList.add('show');
+    }
+
+    function activer(){
+      console.log('this',this);
+      let tab = document.getElementsByClassName('name');
+      for (let i = 0; i < tab.length; i++) {
+        tab[i].classList.remove('active');
+      }
+      this.classList.add('active');
+      for (let i = 0; i < tab.length; i++) {
+        if (tab[i].classList.contains('active')){
+            console.log(i);
+            myfc(i);
+        }
+      }
+    }
+    </script>
+
+
+  </body>
+</html>
